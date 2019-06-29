@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <title>Snake Game</title>
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
   </head>
-  <body>
-      <div><p class="container">Score:</p> <p id="score">1</p></div>
+  <body scroll="no" style="overflow: hidden">
+      <div class="container">
+          <div class="ui compact menu">
+            <div class="active item">
+              <h1 class="ui header">Score:</h1><p id="score"></p>
+            </div>
+            <div class="item">
+              <h2 class="ui header"><a target="_blank" href="https://danieldiaz14.github.io/">Portfolio</a></h2>
+            </div>
+          </div>
+      </div>
       <script src="libraries/p5.js" type="text/javascript"></script>
       <script src="libraries/p5.dom.js" type="text/javascript"></script>
       <script src="libraries/p5.sound.js" type="text/javascript"></script>
       <script src="sketch.js" type="text/javascript"></script>
       <script src="snicko.js" type="text/javascript"></script>
-      <footer><a href="https://danieldiaz14.github.io/"><p>Portfolio</p></a></footer>
   </body>
 </html>

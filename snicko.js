@@ -1,4 +1,3 @@
-let score = document.getElementById('score');
 function Snake() {
   this.x = 0;
   this.y = 0;
@@ -11,7 +10,6 @@ function Snake() {
     var d = dist(this.x, this.y, pos.x, pos.y);
     if (d < 1) {
       this.total++;
-      score.innerHTML = this.total+1;
       return true;
     } else {
       return false;
@@ -46,7 +44,7 @@ function Snake() {
       if (d < 1) {
         alert('starting over');
         this.total = 0;
-        score.innerHTML = this.total+1;
+        document.querySelector('#score').innerHTML = `0`;
         this.tail = [];
         this.x = 0;
         this.y = 0;

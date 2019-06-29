@@ -22,16 +22,13 @@ function pickLocation() {
   food.mult(scl);
 }
 
-function mousePressed() {
-  s.total++;
-}
-
 function draw() {
   background(51);
 
   if (s.eat(food)) {
     pickLocation();
   }
+  document.querySelector('#score').innerHTML = `${s.tail.length}`;
   s.death();
   s.update();
   s.show();
@@ -39,13 +36,14 @@ function draw() {
 
   fill(255, 0, 100);
   rect(food.x, food.y, scl, scl);
-}
+};
 
 
 
 
 
 function keyPressed() {
+  
   if (keyCode === UP_ARROW) {
     s.dir(0, -1);
   } else if (keyCode === DOWN_ARROW) {
